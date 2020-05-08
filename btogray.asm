@@ -1,6 +1,6 @@
 #include "p16F628a.inc"    ;incluir librerias relacionadas con el dispositivo
  __CONFIG _FOSC_INTOSCCLK & _WDTE_OFF & _PWRTE_OFF & _MCLRE_OFF & _BOREN_OFF & _LVP_OFF & _CPD_OFF & _CP_OFF    
-;configuración del dispositivotodo en OFF y la frecuencia de oscilador
+;configuraciÃ³n del dispositivotodo en OFF y la frecuencia de oscilador
 ;es la del "reloj del oscilador interno" (INTOSCCLK)     
 RES_VECT  CODE    0x0000            ; processor reset vector
     GOTO    START                   ; go to beginning of program
@@ -24,11 +24,11 @@ INICIO
  nop ;stop para stimulus 
  MOVF PORTA,0	    
  MOVWF j	    
- RRF j,0	    ;mueve a la derecha 
+ RRF j,0	    
  
- XORWF j,0	    ;XOR 
- BCF STATUS,C	    ;pone en 0 el bit de carry
- MOVWF PORTB	    ;en PORTB se guarda el numero 
+ XORWF j,0	    
+ BCF STATUS,C	    
+ MOVWF PORTB	    
  MOVLW d'0'
  MOVWF j
  MOVLW d'0'
